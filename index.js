@@ -7,6 +7,7 @@ const { MongoClient } = require('mongodb')
 var ObjectId = require('mongodb').ObjectId
 require('dotenv').config()
 var bodyParser = require('body-parser')
+const req = require('express/lib/request')
 app.use(cors())
 app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -34,6 +35,9 @@ async function run() {
     app.get('/places', async (req, res) => {
       const result = await PlaceCollection.find({}).toArray()
       res.send(result)
+    })
+    app.get('/me', (req, res) => {
+      res.send('please do the job')
     })
     app.post('/placeorder', async (req, res) => {
       const result = await OrderCollection.insertOne(req.body)

@@ -16,6 +16,8 @@ require('dotenv').config();
 
 var bodyParser = require('body-parser');
 
+var req = require('express/lib/request');
+
 app.use(cors());
 app.use(express.json());
 app.use(bodyParser.urlencoded({
@@ -66,6 +68,9 @@ function run() {
                 }
               }
             });
+          });
+          app.get('/me', function (req, res) {
+            res.send('please do the job');
           });
           app.post('/placeorder', function _callee2(req, res) {
             var result;
@@ -200,16 +205,16 @@ function run() {
             });
           });
 
-        case 13:
-          _context8.prev = 13;
-          return _context8.finish(13);
+        case 14:
+          _context8.prev = 14;
+          return _context8.finish(14);
 
-        case 15:
+        case 16:
         case "end":
           return _context8.stop();
       }
     }
-  }, null, null, [[0,, 13, 15]]);
+  }, null, null, [[0,, 14, 16]]);
 }
 
 run()["catch"](console.dir);

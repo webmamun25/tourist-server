@@ -69,9 +69,6 @@ function run() {
               }
             });
           });
-          app.get('/me', function (req, res) {
-            res.send('please do the job');
-          });
           app.post('/placeorder', function _callee2(req, res) {
             var result;
             return regeneratorRuntime.async(function _callee2$(_context2) {
@@ -205,16 +202,16 @@ function run() {
             });
           });
 
-        case 14:
-          _context8.prev = 14;
-          return _context8.finish(14);
+        case 13:
+          _context8.prev = 13;
+          return _context8.finish(13);
 
-        case 16:
+        case 15:
         case "end":
           return _context8.stop();
       }
     }
-  }, null, null, [[0,, 14, 16]]);
+  }, null, null, [[0,, 13, 15]]);
 }
 
 run()["catch"](console.dir);

@@ -36,9 +36,7 @@ async function run() {
       const result = await PlaceCollection.find({}).toArray()
       res.send(result)
     })
-    app.get('/me', (req, res) => {
-      res.send('please do the job')
-    })
+
     app.post('/placeorder', async (req, res) => {
       const result = await OrderCollection.insertOne(req.body)
       res.send(result)

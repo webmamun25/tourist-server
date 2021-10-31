@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({
   extended: true
 }));
-var uri = "mongodb+srv://".concat(process.env.DB_USER, ":").concat(process.env.DB_PASS, "@cluster0.eorxc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+var uri = "mongodb+srv://".concat(process.env.DB_USER, ":").concat(process.env.DB_PASS, "@cluster0.eorxc.mongodb.net/VacationDB?retryWrites=true&w=majority");
 var client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: false
